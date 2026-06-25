@@ -10,7 +10,7 @@ const translations = {
     },
     hero: {
       greeting: 'Привет, я',
-      bio: '15 y.o. учусь делать ботов на Python и небольшие прокеты, здесь собрал все что делал или собираюсь делать',
+      bio: 'Учусь делать ботов на Python и небольшие прокеты, здесь собрал все что делал или собираюсь делать',
       projectsBtn: 'Мои проекты',
       contactBtn: 'Связаться',
     },
@@ -67,7 +67,7 @@ const translations = {
     },
     hero: {
       greeting: 'Hi, I am',
-      bio: '15 y.o. learning to build Python bots and small projects — here is everything I have made or plan to make',
+      bio: 'Learning to build Python bots and small projects — here is everything I have made or plan to make',
       projectsBtn: 'My projects',
       contactBtn: 'Get in touch',
     },
