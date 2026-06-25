@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nqweer — портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-brand">
+      <a href="#" class="nav-logo">nqweer</a>
+      <div class="lang-switcher" id="langSwitcher">
+        <button type="button" class="lang-switcher-btn" id="langBtn" aria-expanded="false" aria-haspopup="listbox" aria-label="Выбор языка">
+          <span class="lang-flag" id="langCurrentFlag">🇷🇺</span>
+          <svg class="lang-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <ul class="lang-dropdown" id="langDropdown" role="listbox">
+          <li><button type="button" role="option" data-lang="ru" class="active"><span class="lang-flag">🇷🇺</span></button></li>
+          <li><button type="button" role="option" data-lang="en"><span class="lang-flag">🇬🇧</span></button></li>
+          <li><button type="button" role="option" data-lang="fr"><span class="lang-flag">🇫🇷</span></button></li>
+          <li><button type="button" role="option" data-lang="es"><span class="lang-flag">🇪🇸</span></button></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-i18n="nav.about">Обо мне</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Проекты</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Меню" data-i18n-aria="nav.menuAria">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-stars" aria-hidden="true">
+      <svg class="hero-star" style="top: 14%; left: 6%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 28%; right: 9%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 42%; left: 12%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 58%; right: 14%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 72%; left: 8%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 86%; right: 7%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 20%; left: 22%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+      <svg class="hero-star" style="top: 65%; right: 22%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M12 1l1.8 7.2L21 10l-7.2 1.8L12 19l-1.8-7.2L3 10l7.2-1.8L12 1z"/>
+      </svg>
+    </div>
+
+    <div class="hero-emblem">
+      <div class="hero-emblem-rotate" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="165" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <g class="sparkle" transform="translate(343 118)">
+            <path fill="currentColor" d="M0-14 L3-4 L14 0 L3 4 L0 14 L-3 4 L-14 0 L-3-4Z"/>
+          </g>
+          <g class="sparkle sparkle-delay" transform="translate(57 282)">
+            <path fill="currentColor" d="M0-14 L3-4 L14 0 L3 4 L0 14 L-3 4 L-14 0 L-3-4Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-emblem-inner">
+        <p class="hero-label" data-i18n="hero.greeting">Привет, я</p>
+        <h1 class="hero-emblem-name">nqweer</h1>
+        <p class="hero-emblem-text" data-i18n="hero.bio">
+          15 y.o. учусь делать ботов на Python и небольшие прокеты,
+          здесь собрал все что делал или собираюсь делать
+        </p>
+      </div>
+    </div>
+
+    <div class="hero-content reveal">
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary" data-i18n="hero.projectsBtn">Мои проекты</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.contactBtn">Связаться</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section"></section>
+
+  <section id="projects" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title reveal" data-i18n="projects.title">Проекты</h2>
+      <p class="section-subtitle reveal" data-i18n="projects.subtitle">Что уже сделано и что в планах</p>
+
+      <!-- Готовые проекты -->
+      <div class="projects-group reveal">
+        <h3 class="projects-group-label" data-i18n="projects.doneGroup">Готовые</h3>
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-status done" data-i18n="projects.statusDone">Готово</span>
+            <h4 data-i18n="projects.p1.title">Telegram-бот для квадратных уравнений</h4>
+            <p data-i18n="projects.p1.desc">Бот решает квадратные уравнения и отвечает в Telegram.</p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Telegram API</span>
+            </div>
+            <a href="https://github.com/Alexey-61/nqweer_bio/blob/main/tg_quadratic_bot.py" class="project-link" target="_blank" rel="noopener" data-i18n="projects.more">Подробнее →</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status done" data-i18n="projects.statusDone">Готово</span>
+            <h4 data-i18n="projects.p2.title">Калькулятор</h4>
+            <p data-i18n="projects.p2.desc">Небольшая программа-калькулятор на Python.</p>
+            <div class="project-tags">
+              <span>Python</span>
+            </div>
+            <a href="https://github.com/Alexey-61/nqweer_bio/blob/main/calculator.py" class="project-link" target="_blank" rel="noopener" data-i18n="projects.more">Подробнее →</a>
+          </article>
+        </div>
+      </div>
+
+      <!-- В разработке -->
+      <div class="projects-group reveal">
+        <h3 class="projects-group-label" data-i18n="projects.wipGroup">В разработке</h3>
+        <div class="projects-row">
+          <article class="project-card">
+            <span class="project-status wip" data-i18n="projects.statusWip">В работе</span>
+            <h4 data-i18n="projects.p3.title">Личный сайт-портфолио</h4>
+            <p data-i18n="projects.p3.desc">Этот сайт — мой первый веб-проект с анимациями и адаптивом.</p>
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="#" class="project-link" data-i18n="projects.soon">Скоро →</a>
+          </article>
+
+          <article class="project-card">
+            <span class="project-status planned" data-i18n="projects.statusPlanned">Планирую</span>
+            <h4 data-i18n="projects.p4.title">Название будущего проекта</h4>
+            <p data-i18n="projects.p4.desc">Ещё в разработке</p>
+            <a href="#" class="project-link" data-i18n="projects.soon">Скоро →</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container contact-block reveal">
+      <h2 class="section-title" data-i18n="contact.title">Контакты</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">Найди меня в соцсетях или напиши напрямую</p>
+
+      <div class="social-links">
+        <a href="https://t.me/nqw3r" class="social-card" target="_blank" rel="noopener">
+          <span class="social-icon">TG</span>
+          <span class="social-name">Telegram</span>
+          <span class="social-handle">@nqw3r</span>
+        </a>
+        <a href="https://github.com/Alexey-61" class="social-card" target="_blank" rel="noopener">
+          <span class="social-icon">GH</span>
+          <span class="social-name">GitHub</span>
+          <span class="social-handle">Alexey-61</span>
+        </a>
+        <a href="https://vk.com/aleekzz" class="social-card" target="_blank" rel="noopener">
+          <span class="social-icon">VK</span>
+          <span class="social-name" data-i18n="contact.vk">ВКонтакте</span>
+          <span class="social-handle">@aleekzz</span>
+        </a>
+        <a href="mailto:nqw3r61@gmail.com" class="social-card">
+          <span class="social-icon">@</span>
+          <span class="social-name">Email</span>
+          <span class="social-handle">nqw3r61@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-i18n="footer.text">© 2026 nqweer. Сделано с HTML, CSS и JavaScript.</p>
+  </footer>
+
+  <!-- Secret Input -->
+  <div class="secret-pad" id="secretPad">
+    <input
+      class="secret-input"
+      id="secretInput"
+      type="password"
+      inputmode="numeric"
+      maxlength="6"
+      placeholder="• • • • • •"
+      autocomplete="off"
+      spellcheck="false"
+    />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
